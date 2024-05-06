@@ -8,4 +8,14 @@ class DefaultController extends AppController
     {
         $this->render('login');
     }
+
+    public function myProfile()
+    {
+        $this->render('myProfile');
+    }
+
+    public function changePassword()
+    {
+        $this->render('changePassword');
+    }
 }

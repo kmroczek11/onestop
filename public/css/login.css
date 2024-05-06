@@ -1,0 +1,23 @@
+.container {
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.logo img{
+    width: 509px;
+    height: 87px;
+    text-align: center;
+}
+
+form {
+    flex-direction: column;
+    width: 80%;
+    height: 40vh;
+    gap: 30px;
+}
+
+input {
+    width: 253px;
+    height: 66px;
+}
