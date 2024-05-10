@@ -81,15 +81,11 @@ body {
     color: var(--primarycolor)
 }
 
-.icons-nav .active path {
-    color: var(--primarycolor)
-}
-
 .animated-input {
     width: 292px;
     height: 81px;
     position: relative;
-    background: transparent;
+    background: none;
 }
 
 .animated-input input {
@@ -143,4 +139,29 @@ body {
 .animated-input input:focus+.label-name::after,
 .animated-input input:valid+.label-name::after {
     transform: translateX(0%);
+}
+
+.select-container{
+    width: 426px;
+    height: 81px;
+    position: relative;
+    background: none;
+}
+
+.select-container select {
+    width: 100%;
+    height: 100%;
+    border: 0.5px solid var(--secondarycolor);
+    border-radius: 20px;
+    font-size: 20px;
+    color: var(--secondarycolor);
+    text-align: center;
+}
+
+.select-container label {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 12px;
+    pointer-events: none;
 }

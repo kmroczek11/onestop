@@ -18,4 +18,14 @@ class DefaultController extends AppController
     {
         $this->render('changePassword');
     }
+
+    public function home()
+    {
+        $this->render('home');
+    }
+
+    public function createTicket()
+    {
+        $this->render('createTicket');
+    }
 }
