@@ -19,6 +19,7 @@ services:
       dockerfile: docker/php/Dockerfile
     volumes:
       - .:/app/
+      
   db:
     image: postgres:latest
     restart: always

@@ -34,7 +34,7 @@ body {
 }
 
 .rounded-container {
-    width: 80%;
+    width: 426px;
     height: 66px;
     border: 0.5px solid #2C2C31;
     border-radius: 20px;
@@ -52,7 +52,6 @@ body {
 .rounded-container .text {
     font-size: 32px;
     font-weight: 400;
-    line-height: 39px;
     color: var(--secondarycolor);
 }
 
@@ -61,6 +60,8 @@ body {
     height: 83px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     backdrop-filter: blur(13.5914px);
+    position: fixed;
+    top:0;
 }
 
 .icons-nav {
@@ -85,7 +86,6 @@ body {
     width: 292px;
     height: 81px;
     position: relative;
-    background: none;
 }
 
 .animated-input input {
@@ -95,6 +95,7 @@ body {
     border-radius: 20px;
     font-size: 20px;
     color: var(--secondarycolor);
+    background: transparent;
 }
 
 .animated-input label {
@@ -141,7 +142,7 @@ body {
     transform: translateX(0%);
 }
 
-.select-container{
+.select-container {
     width: 426px;
     height: 81px;
     position: relative;
@@ -156,6 +157,7 @@ body {
     font-size: 20px;
     color: var(--secondarycolor);
     text-align: center;
+    background: transparent;
 }
 
 .select-container label {
@@ -164,4 +166,21 @@ body {
     left: 20px;
     font-size: 12px;
     pointer-events: none;
+}
+
+@media only screen and (max-device-width: 420px) {
+    .color-button {
+        width: 253px;
+        height: 66px;
+    }
+
+    .rounded-container {
+        width: 247px;
+    }
+
+    .icons-nav-container {
+        top:auto;
+        bottom: 0;
+        box-shadow: 0px -0.5px 0px rgba(0, 0, 0, 0.3);
+    }
 }

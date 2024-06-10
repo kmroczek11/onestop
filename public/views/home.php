@@ -3,12 +3,15 @@
 <head>
     <link rel="stylesheet" type="text/css" href="public/css/style.css">
     <link rel="stylesheet" type="text/css" href="public/css/home.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script type="text/javascript" src="./public/js/menu.js" defer></script>
     <title>HOME</title>
 </head>
 
 <body>
     <div class="side-nav">
+        <i class="fas fa-times"></i>
         <p class="header">LOGGED AS<br /><span>KAMIL MROCZEK</span></p>
         <ul>
             <li class="flex-center-center"> <i class="fas fa-arrow-left"></i>
@@ -41,13 +44,13 @@
             <li class="flex-center-center">
                 <i class="fas fa-sign-out-alt"></i>
                 <a>LOGOUT</a>
-                <i class="fas fa-greater-than"></i>
             </li>
         </ul>
     </div>
 
     <div class="container">
         <div class="top-bar">
+            <i class="fas fa-bars"></i>
             <p>Open tickets: 0</p>
             <p>|</p>
             <p>Stopwatches: 0</p>
@@ -98,14 +101,12 @@
             </table>
         </div>
         <div class="footer">
-            <p>
-                Copyright © 2024. OneStop
-                All Rights Reserved.
-            </p>
+            <p>Copyright © 2024. OneStop</p>
+            <p>All Rights Reserved.</p>
         </div>
         <button class="icon-button flex-center-center">
             <i class="fas fa-plus"></i>
-            <a href="http://localhost:8080/createTicket">Create Ticket</a>
+            <a href="http://localhost:8080/createTicket">Create<br />Ticket</a>
         </button>
     </div>
 

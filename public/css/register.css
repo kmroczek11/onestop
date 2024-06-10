@@ -7,14 +7,14 @@
 .logo{
     width:100%;
     text-align: center;
-    margin-bottom: 300px;
+    margin-bottom: 200px;
 }
 
-.login-container {
+.register-container {
     width: 50%;
 }
 
-form.login {
+form.register {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -27,7 +27,7 @@ input {
 }
 
 @media only screen and (max-device-width: 420px) {
-    .login-container {
+    .register-container {
         width: 100%;
     }
 
