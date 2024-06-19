@@ -10,7 +10,8 @@
 }
 
 .header span {
-    color: var(--primarycolor)
+    color: var(--primarycolor);
+    text-transform: uppercase;
 }
 
 .side-nav {
@@ -118,6 +119,10 @@
     color: var(--primarycolor)
 }
 
+.container .table-container table tr:nth-child(n+3){
+    text-transform: uppercase;
+}
+
 .footer p{
     margin:0;
     text-align: center;
@@ -144,13 +149,8 @@
     cursor: pointer;
 }
 
-.icon-button a{
-    text-decoration: none;
-    font-size: 16px;
-}
-
 .icon-button .fa-plus{
-    font-size:80px;
+    font-size:55px;
 }
 
 @media only screen and (max-device-width: 420px) {
@@ -167,6 +167,7 @@
     }
     
     .container{
+        width: 100%;
         margin-left: 0;
     }
 

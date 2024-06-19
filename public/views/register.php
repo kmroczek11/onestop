@@ -19,17 +19,20 @@
                 <input name="confirmedPassword" type="password" placeholder="Confirm Password">
                 <input name="name" type="text" placeholder="Name">
                 <input name="surname" type="text" placeholder="Surname">
+                <input name="email" type="email" placeholder="Email">
+                <input name="phone" type="tel" placeholder="Phone number">
+                <input name="notes" type="text" placeholder="Notes">
+                <div class="messages">
+                    <?php
+                    if (isset($messages)) {
+                        foreach ($messages as $message) {
+                            echo $message;
+                        }
+                    }
+                    ?>
+                </div>
                 <button class="color-button">REGISTER</button>
                 <a href="http://localhost:8080/login">Already have an account? Login</a>
-                <div class="messages">
-                <?php
-                if (isset($messages)) {
-                    foreach ($messages as $message) {
-                        echo $message;
-                    }
-                }
-                ?>
-                </div>
             </form>
         </div>
     </div>

@@ -25,7 +25,7 @@
     padding: 0;
 }
 
-.side-nav .fa-times{
+.side-nav .fa-times {
     display: none;
 }
 
@@ -54,9 +54,10 @@
     position: absolute;
     bottom: 0;
     margin: 0;
+    justify-content: center;
 }
 
-.side-nav ul li:nth-child(7) a{
+.side-nav ul li:nth-child(7) a {
     font-size: 80px;
 }
 
@@ -81,7 +82,7 @@
     font-size: 20px;
 }
 
-.container .top-bar .fa-bars{
+.container .top-bar .fa-bars {
     display: none;
 }
 
@@ -91,71 +92,56 @@
 
 .container .form-container {
     width: 95%;
-    height: 800px;
+    min-height: 800px;
     background: rgba(238, 222, 223, 0.2);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 20px;
-    flex-direction: column;
-    gap:60px;
+
 }
 
-.footer p{
-    margin:0;
+.container .form-container .select-company-container,
+.create-ticket-container {
+    flex-direction: column;
+    gap: 60px;
+}
+
+.container .form-container .create-ticket-container {
+    display: none;
+}
+
+.footer p {
+    margin: 0;
     text-align: center;
 }
 
-.icon-button {
-    width: 120px;
-    height: 120px;
-    background: var(--primarycolor);
-    border-radius: 50%;
-    border: none;
-    display: flex;
-    flex-direction: column;
-    color: #fff;
-    font-size: 24px;
-    position: fixed;
-    right:0;
-    bottom:0;
-    margin:30px;
-}
-
-.icon-button:hover {
-    background: #b60505;
-    cursor: pointer;
-}
-
-.icon-button a{
-    text-decoration: none;
-}
-
 @media only screen and (max-device-width: 420px) {
-    .side-nav{
-        width:50%;
+    .side-nav {
+        width: 50%;
         display: none;
     }
 
-    .side-nav .fa-times{
+    .side-nav .fa-times {
         font-size: 55px;
         display: block;
         text-align: right;
         margin: 10px;
     }
-    
-    .container{
+
+    .container {
+        width: 100%;
         margin-left: 0;
     }
 
-    .container .top-bar .fa-bars{
+    .container .top-bar .fa-bars {
         display: block;
     }
-    
-    .container .table-container{
-        overflow:scroll;
+
+    .container .table-container {
+        overflow: scroll;
     }
 
-    .side-nav ul li a img{
-        width:212px;
+    .side-nav ul li a img {
+        width: 212px;
         height: 37px;
     }
 }

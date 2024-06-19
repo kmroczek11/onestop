@@ -16,17 +16,17 @@
             <form class="login flex-center-center" action="login" method="POST">
                 <input name="username" type="text" placeholder="Username">
                 <input name="password" type="password" placeholder="Password">
+                <div class="messages">
+                    <?php
+                    if (isset($messages)) {
+                        foreach ($messages as $message) {
+                            echo $message;
+                        }
+                    }
+                    ?>
+                </div>
                 <button class="color-button">LOGIN</button>
                 <a href="http://localhost:8080/register">Don't have an account? Register</a>
-                <div class="messages">
-                <?php
-                if (isset($messages)) {
-                    foreach ($messages as $message) {
-                        echo $message;
-                    }
-                }
-                ?>
-                </div>
             </form>
         </div>
     </div>

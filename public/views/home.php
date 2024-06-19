@@ -6,13 +6,17 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <script type="text/javascript" src="./public/js/menu.js" defer></script>
+    <script type="text/javascript" src="./public/js/createTicketButton.js" defer></script>
     <title>HOME</title>
 </head>
 
 <body>
     <div class="side-nav">
         <i class="fas fa-times"></i>
-        <p class="header">LOGGED AS<br /><span>KAMIL MROCZEK</span></p>
+        <p class="header">
+            <?php
+            echo "LOGGED AS<br /><span>" . $_SESSION["user"]->getName() . " " . $_SESSION["user"]->getSurname() . "</span></p>"
+                ?>
         <ul>
             <li class="flex-center-center"> <i class="fas fa-arrow-left"></i>
                 <a>BACK</a>
@@ -81,32 +85,34 @@
                     <th>Last modified</th>
                     <th>Last modified by</th>
                 </tr>
-                <tr>
-                    <td>2332</td>
-                    <td>-</td>
-                    <td>NEW</td>
-                    <td>SUPPORT</td>
-                    <td>-</td>
-                    <td>EASTWAYS TRAVEL</td>
-                    <td>MANDA MISTRY</td>
-                    <td>HADRIAN BRZEZNIAK</td>
-                    <td>KAMIL MROCZEK</td>
-                    <td>TEST</td>
-                    <td>2024-04-08 16:00:00</td>
-                    <td>00:23</td>
-                    <td>00:00</td>
-                    <td>2024-04-08 16:56:19</td>
-                    <td>KAMIL MROCZEK</td>
-                </tr>
+                <?php foreach ((array)$tickets as $ticket): ?>
+                    <tr>
+                        <td><?= $ticket->getId(); ?></td>
+                        <td><?= $ticket->getInternal(); ?></td>
+                        <td><?= $ticket->getStatus(); ?></td>
+                        <td><?= $ticket->getType(); ?></td>
+                        <td><?= $ticket->getFranchise(); ?></td>
+                        <td><?= $ticket->getCompany(); ?></td>
+                        <td><?= $ticket->getRequestFor(); ?></td>
+                        <td><?= $ticket->getRequestBy(); ?></td>
+                        <td><?= $ticket->getAssignedTo(); ?></td>
+                        <td><?= $ticket->getSubject(); ?></td>
+                        <td><?= $ticket->getTicketStart(); ?></td>
+                        <td><?= $ticket->getWorkTime(); ?></td>
+                        <td><?= $ticket->getRemainingTime(); ?></td>
+                        <td><?= $ticket->getLastModified(); ?></td>
+                        <td><?= $ticket->getLastModifiedBy(); ?></td>
+                    </tr>
+                <?php endforeach; ?>
             </table>
         </div>
         <div class="footer">
             <p>Copyright © 2024. OneStop</p>
             <p>All Rights Reserved.</p>
         </div>
-        <button class="icon-button flex-center-center">
+        <button class="icon-button flex-center-center create-ticket-button">
             <i class="fas fa-plus"></i>
-            <a href="http://localhost:8080/createTicket">Create<br />Ticket</a>
+            Create<br />Ticket
         </button>
     </div>
 
